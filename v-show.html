@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-show</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="切换图片" @click="changeIsShow">
+        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201701%2F14%2F20170114093808_Tne3z.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1619274306&t=4d5f18c897dae43f0592abff3f396aad"
+            alt="" v-show="isShow">
+        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201701%2F14%2F20170114093808_Tne3z.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1619274306&t=4d5f18c897dae43f0592abff3f396aad"
+        v-show="number>=18">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                isShow: false,
+                number:17
+            },
+            methods: {
+                changeIsShow: function () {
+                    this.isShow = !this.isShow;
+                }
+            },
+        })
+    </script>
+
+</body>
+
+</html>

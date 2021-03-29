@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-bind可缩写</title>
+</head>
+
+<body>
+    <div id="app">
+        <img :src="imgSrc" alt="" :title="imgTitle" :class:"active?'isActive':''" @click="toggleActive">
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                imgSrc: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2F2c.zol-img.com.cn%2Fproduct%2F124_500x2000%2F748%2FceZOdKgDAFsq2.jpg&refer=http%3A%2F%2F2c.zol-img.com.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1619446982&t=446714779dbf879f34c6fc57afa00808",
+                imgTitle:"测试"
+            },
+            methods:{toggleActive:function(){this.active=!this.active}}
+        })
+    </script>
+
+</body>
+
+</html>

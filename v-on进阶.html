@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-on进阶</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="点击" @click="dolt(666)">
+        <input type="text" value="" @keyup.enter="sayHi">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                dolt: function (p1, p2) {console.log(p1)},
+                sayHi: function () {alert("学习好难啊")}
+            }
+        })
+    </script>
+
+</body>
+
+</html>
